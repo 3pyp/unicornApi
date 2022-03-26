@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Unicorn = require('./Unicorn')
+const Unicorn = require('./unicorn')
 const DB_URL = "mongodb+srv://root:root@cluster0.07urh.mongodb.net/unicorns-app?retryWrites=true&w=majority"
 
 mongoose.connect(DB_URL, (err)=> {
