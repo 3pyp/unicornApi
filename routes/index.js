@@ -51,9 +51,9 @@ router.put('/unicorns/:unicornid', (req, res) => {
 
 router.delete('/unicorns/:unicornid' , (req,res) =>{
   Unicorn.findByIdAndDelete(req.params.unicornid).then((result) => {
-    res.status(200).send("Unicornio eliminado")
+    res.status(200).send({message: "Unicornio eliminado"})
   }).catch((err) => {
-    res.status(404).send('Unicornio no existe')
+    res.status(404).send({message: "Unicornio no encontrado"})
   });
 })
 
