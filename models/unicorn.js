@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const unicornSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -17,6 +17,6 @@ const unicornSchema = new mongoose.Schema({
   },
 });
 
-const Unicorn = mongoose.model('Unicorn', unicornSchema);
+const Unicorn = mongoose.model("Unicorn", unicornSchema);
 
 module.exports = Unicorn;

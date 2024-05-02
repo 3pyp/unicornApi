@@ -1,19 +1,28 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "mongoose": "^6.2.8"
+    "express": "^4.19.2",
+    "mongoose": "^6.12.8",
+    "nodemon": "^3.1.0"
   },
   "name": "unicornsapp",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
-    "start" : "node app.js",
-    "dev" : "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Esta API ha sido creada con fines educativos y experimentales. Puedes utilizar la API para hacer peticiones de tipo **GET**, **POST**, **PUT** y **DELETE**, lo que te permitirá practicar un CRUD desde el front end. Esta basada en unicornios porque así lo quise hacer XD más abajo podrás encontrar la documentación para utilizarla correctamente.",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristiangutierrezdev/sample-rest-api-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cristiangutierrezdev/sample-rest-api-practice/issues"
+  },
+  "homepage": "https://github.com/cristiangutierrezdev/sample-rest-api-practice#readme"
 }

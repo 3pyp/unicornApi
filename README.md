@@ -28,6 +28,16 @@ Esta api no exige ningún tipo de autenticación por lo tanto lo único necesari
 |image           |`string`                       |SI                           |
 |age             |`number`                       |NO                           |
 
+##### Ejemplo de body 
+```
+{
+  "name": "Sky",
+  "power": "Encatamineto",
+  "image": "https://img.freepik.com/vector-gratis/lindo-unicornio-bebiendo-te-leche-boba-ilustracion-icono-vector-dibujos-animados-arco-iris-icono-bebida-animal_138676-7412.jpg",
+  "age": 7
+}
+```
+
 ##### Respuesta
 La respuesta de la api sera el objeto del unicornio creado en la base de datos.
 ##
