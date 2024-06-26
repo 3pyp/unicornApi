@@ -24,7 +24,6 @@ router.get("/unicorns", (req, res) => {
 
 router.post("/unicorns", (req, res) => {
   const newUnicorn = new Unicorn(req.body);
-  console.log(req.body);
   newUnicorn
     .save()
     .then((result) => {
@@ -36,9 +35,17 @@ router.post("/unicorns", (req, res) => {
 });
 
 router.put("/unicorns/:unicornid", (req, res) => {
+  const { name, power, age, image } = req.body;
+  let data = {};
+
+  if (name !== undefined && name !== null) data["name"] = name;
+  if (power !== undefined && power !== null) data["power"] = power;
+  if (age !== undefined && age !== null) data["age"] = age;
+  if (image !== undefined && image !== null) data["image"] = image;
+
   Unicorn.findById(req.params.unicornid)
     .then((dbunicorn) => {
-      const newUnicorndata = Object.assign(dbunicorn, req.body);
+      const newUnicorndata = Object.assign(dbunicorn, data);
       return newUnicorndata.save();
     })
     .then((result) => {
