@@ -38,10 +38,12 @@ router.put("/unicorns/:unicornid", (req, res) => {
   const { name, power, age, image } = req.body;
   let data = {};
 
-  if (name !== undefined && name !== null) data["name"] = name;
-  if (power !== undefined && power !== null) data["power"] = power;
-  if (age !== undefined && age !== null) data["age"] = age;
-  if (image !== undefined && image !== null) data["image"] = image;
+  if (name !== undefined && name !== null && name !== "") data["name"] = name;
+  if (power !== undefined && power !== null && power !== "")
+    data["power"] = power;
+  if (age !== undefined && age !== null && age !== "") data["age"] = age;
+  if (image !== undefined && image !== null && image !== "")
+    data["image"] = image;
 
   Unicorn.findById(req.params.unicornid)
     .then((dbunicorn) => {
